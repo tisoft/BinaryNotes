@@ -17,6 +17,7 @@ public class AsnElementType {
 
     public AsnElementType() {
         isOptional = false;
+        name = "";
     }
 
     @Override

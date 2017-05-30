@@ -12,7 +12,6 @@ AsnConstraint
 AsnDefinedType
 AsnDefinedValue
 AsnElementType
-AsnElementTypeList
 AsnEmbedded
 AsnEnum
 AsnExternal
