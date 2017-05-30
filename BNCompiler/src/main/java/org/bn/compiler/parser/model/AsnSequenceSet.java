@@ -1,20 +1,16 @@
 package org.bn.compiler.parser.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class AsnSequenceSet {
     
-    final String                BUILTINTYPE  = "SEQUENCE";
-    final String                BUILTINTYPE1 = "SET";
-    public List<AsnElementType> componentTypes;
-    public boolean              isSequence;
-    public String               name;    // Name of Sequence
+    final String              BUILTINTYPE  = "SEQUENCE";
+    final String              BUILTINTYPE1 = "SET";
+    public AsnElementTypeList elementTypeList;
+    public boolean            isSequence;
+    public String             name;    // Name of Sequence
 
     public AsnSequenceSet() {
-        name           = "";
-        isSequence     = false;
-        componentTypes = new ArrayList<>();
+        name       = "";
+        isSequence = false;
     }
 
     @Override
@@ -29,8 +25,8 @@ public class AsnSequenceSet {
 
         ts += "{";
 
-        if (componentTypes != null) {
-            for (AsnElementType elementType: componentTypes) {
+        if (elementTypeList != null) {
+            for (AsnElementType elementType: elementTypeList.elements) {
                 ts += elementType;
             }
         }
