@@ -225,8 +225,18 @@ namespace org.bn.coders
 			value_Renamed.Value = "Hello";
 			return value_Renamed;
 		}
+
+		public virtual TestIA5 createTestIA5()
+		{
+			TestIA5 value_Renamed = new TestIA5();
+			value_Renamed.Value = "Hello";
+			return value_Renamed;
+		}
+
 		public abstract byte[] createTestPRNBytes();
-		
+
+		public abstract byte[] createTestIA5Bytes();
+
 		public virtual TestOCT createTestOCT()
 		{
 			TestOCT value_Renamed = new TestOCT();

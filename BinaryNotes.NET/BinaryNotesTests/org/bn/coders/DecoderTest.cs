@@ -242,6 +242,11 @@ namespace org.bn.coders
             Assert.IsNotNull(val);
             Assert.AreEqual(val.Value, coderTestUtils.createTestPRN().Value);
 
+            stream = new System.IO.MemoryStream((coderTestUtils.createTestIA5Bytes()));
+            TestIA5 valIA5 = decoder.decode<TestIA5>(stream);
+            Assert.IsNotNull(valIA5);
+            Assert.AreEqual(val.Value, coderTestUtils.createTestIA5().Value);
+
             stream = new System.IO.MemoryStream((coderTestUtils.createTestOCTBytes()));
             TestOCT valOct = decoder.decode<TestOCT>(stream);
             Assert.IsNotNull(valOct);

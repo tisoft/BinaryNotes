@@ -103,7 +103,12 @@ namespace org.bn.coders.per
 		{
 			return new byte[]{(byte) (0x05), (byte) (0x91), (byte) (0x97), (byte) (0x66), (byte) (0xCD), (byte) (0xE0)};
 		}
-		
+
+		public override byte[] createTestIA5Bytes()
+		{
+			return createTestPRNBytes();
+		}
+
 		public override byte[] createTestOCTBytes()
 		{
 			return new byte[]{(byte) (0x05), (byte) (0x01), (byte) (0x02), (byte) (0xFF), (byte) (0x03), (byte) (0x04)};
