@@ -2,7 +2,7 @@ TEST_ASN
 
 DEFINITIONS IMPLICIT TAGS ::= BEGIN
 
-EXPORTS TestOCT,TestPRN,TestI32,TestI16,TestI8,ContentType,ValueWithParams,PlainParamsMap,ContentPartHeaders,ContentPartHeader,ContentSchema,Data,DataArray;
+EXPORTS TestOCT,TestPRN,TestIA5,TestI32,TestI16,TestI8,ContentType,ValueWithParams,PlainParamsMap,ContentPartHeaders,ContentPartHeader,ContentSchema,Data,DataArray;
 
 	TestIR  ::= INTEGER (1 .. 5)
 	TestI8	::= INTEGER (0 .. 255)
@@ -15,7 +15,7 @@ EXPORTS TestOCT,TestPRN,TestI32,TestI16,TestI8,ContentType,ValueWithParams,Plain
 
 	TestPRN	::= PrintableString
 	TestOCT	::= OCTET STRING
-
+    TestIA5 ::= IA5String
 	
 	Data   ::= CHOICE {
 		plain 		[0] TestPRN, 
