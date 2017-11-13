@@ -15,7 +15,7 @@ EXPORTS TestOCT,TestPRN,TestIA5,TestI32,TestI16,TestI8,ContentType,ValueWithPara
 
 	TestPRN	::= PrintableString
 	TestOCT	::= OCTET STRING
-    TestIA5 ::= IA5String
+	TestIA5 ::= IA5String
 	
 	Data   ::= CHOICE {
 		plain 		[0] TestPRN, 
