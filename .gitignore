@@ -1,6 +1,7 @@
 /JavaLibrary/target
 /BNCompiler/target/
 /BNCompiler/testworkdir
+/BinaryNotes.NET/.vs
 /BinaryNotes.NET/*.suo
 /BinaryNotes.NET/BinaryNotes/bin
 /BinaryNotes.NET/BinaryNotes/obj
