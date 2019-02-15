@@ -267,6 +267,7 @@ namespace org.bn.coders
         /// <param name="obj">The encoded sequence</param>
         /// <param name="fieldIdx">Index of the sequence field to be encoded</param>
         /// <param name="field">Field of the encoded sequence to be encoded</param>
+        /// <param name="stream"></param>
         /// <param name="elementInfo">ElementInfo for the encoded sequence</param>
 		public virtual int encodeSequenceField(object obj, int fieldIdx, PropertyInfo field, System.IO.Stream stream, ElementInfo elementInfo)
 		{
