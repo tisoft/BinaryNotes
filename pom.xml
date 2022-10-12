@@ -27,9 +27,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/drasil/BinaryNotes.git</connection>
-        <developerConnection>scm:git:git@github.com:drasil/BinaryNotes.git</developerConnection>
-        <url>git@github.com:drasil/BinaryNotes.git</url>
+        <connection>scm:git:git://github.com/tisoft/BinaryNotes.git</connection>
+        <developerConnection>scm:git:git@github.com:tisoft/BinaryNotes.git</developerConnection>
+        <url>git@github.com:tisoft/BinaryNotes.git</url>
     </scm>
 
     <developers>
@@ -42,6 +42,11 @@
             <id>drasil</id>
             <name>Pavel Drasil</name>
             <email>pavel.drasil@gmail.com</email>
+        </developer>
+        <developer>
+            <id>tisoft</id>
+            <name>Markus Heberling</name>
+            <email>markus@heberling.net</email>
         </developer>
     </developers>
 
