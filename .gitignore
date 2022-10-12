@@ -11,3 +11,4 @@
 nbactions.xml
 nb-configuration.xml
 .idea
+.flattened-pom.xml

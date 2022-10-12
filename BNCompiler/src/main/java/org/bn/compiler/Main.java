@@ -36,14 +36,14 @@ import org.lineargs.LineArgsParser;
 
 public class Main {
 
-    private static final String VERSION = "1.6";
+    private static final String VERSION = Main.class.getPackage().getImplementationVersion();
     
     private CompilerArgs arguments = null;
 
     public static void main(String args[]) {
         try {
             System.out.println("BinaryNotes compiler v" + VERSION);
-            System.out.println("        (c) 2006-2015 Abdulla G. Abdurakhmanov, Pavel Drasil");
+            System.out.println("        (c) 2006-2022 Abdulla G. Abdurakhmanov, Pavel Drasil, Markus Heberling");
             new Main().start(args);
         } catch (Exception ex) {
             System.err.println(ex);
