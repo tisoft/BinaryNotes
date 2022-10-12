@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>cz.drasil</groupId>
+        <groupId>net.heberling.binarynotes</groupId>
         <artifactId>binarynotes-parent</artifactId>
         <version>${revision}${sha1}${changelist}</version>
         <relativePath>../pom.xml</relativePath>
@@ -33,14 +33,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>cz.drasil</groupId>
+            <groupId>net.heberling.binarynotes</groupId>
             <artifactId>bncompiler</artifactId>
             <version>${project.version}</version>
             <classifier>dist</classifier>
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>cz.drasil</groupId>
+            <groupId>net.heberling.binarynotes</groupId>
             <artifactId>binarynotes</artifactId>
             <version>${project.version}</version>
         </dependency>

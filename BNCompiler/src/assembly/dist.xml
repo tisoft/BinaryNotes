@@ -13,7 +13,7 @@
         <!-- project jar goes to the root -->
         <dependencySet>
             <includes>
-                <include>cz.drasil:bncompiler</include>
+                <include>net.heberling.binarynotes:bncompiler</include>
             </includes>
         </dependencySet>
         <!-- dependencies go to the lib folder -->

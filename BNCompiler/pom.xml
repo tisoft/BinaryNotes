@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cz.drasil</groupId>
+        <groupId>net.heberling.binarynotes</groupId>
         <artifactId>binarynotes-parent</artifactId>
         <version>${revision}${sha1}${changelist}</version>
         <relativePath>../pom.xml</relativePath>

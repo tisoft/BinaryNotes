@@ -5,6 +5,7 @@ ChangeLog
 							[!] 		- Important warning or note
 							{<component>}	- Component/Group that changed
 
+1.6.0	{all}		[!] Moved to groupId net.heberling.binarynotes and released on maven central
 1.6.0	{lib}		[*] Fixed encoding and decoding of negative and infinity real numbers
 1.6.0	{all}		[+] Migrated to Java 7
 -

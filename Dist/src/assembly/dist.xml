@@ -22,7 +22,7 @@
         <dependencySet>
             <outputDirectory>compiler</outputDirectory>
             <includes>
-                <include>cz.drasil:bncompiler:zip:dist</include>
+                <include>net.heberling.binarynotes:bncompiler:zip:dist</include>
             </includes>
             <unpack>true</unpack>
             <useProjectArtifact>false</useProjectArtifact>
@@ -30,7 +30,7 @@
         <dependencySet>
             <outputDirectory>java</outputDirectory>
             <includes>
-                <include>cz.drasil:binarynotes</include>
+                <include>net.heberling.binarynotes:binarynotes</include>
             </includes>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
