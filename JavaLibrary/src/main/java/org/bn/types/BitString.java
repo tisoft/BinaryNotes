@@ -20,7 +20,7 @@ import java.util.Arrays;
 
 /**
  * BitString represents ASN.1 BIT STRING data types
- * @todo Need more functional operations for write/read bits
+ * todo: Need more functional operations for write/read bits
  */
 public class BitString {
     
