@@ -28,3 +28,14 @@ jobs:
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+      - name: tag as latest
+        run: git tag -f latest
+      - name: push latest tag
+        run: git push -f origin latest
+      - name: Prerelease
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: ChangeLog.txt
+          files: Dist/target/binarynotes-dist-*.zip
+          prerelease: true
+          tag_name: latest
