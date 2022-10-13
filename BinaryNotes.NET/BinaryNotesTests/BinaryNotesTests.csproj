@@ -127,6 +127,7 @@
     <Compile Include="org\bn\coders\test_asn\TestI16.cs" />
     <Compile Include="org\bn\coders\test_asn\TestI32.cs" />
     <Compile Include="org\bn\coders\test_asn\TestI8.cs" />
+    <Compile Include="org\bn\coders\test_asn\TestIA5.cs" />
     <Compile Include="org\bn\coders\test_asn\TestIR.cs" />
     <Compile Include="org\bn\coders\test_asn\TestLong.cs" />
     <Compile Include="org\bn\coders\test_asn\TestLongTag.cs" />

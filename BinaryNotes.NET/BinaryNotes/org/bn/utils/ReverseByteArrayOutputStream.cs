@@ -23,11 +23,9 @@ namespace org.bn.utils
 	/// is written to it. 
 	/// The data can be retrieved using <code>toByteArray()</code> and
 	/// <code>toString()</code>.
-	/// <p>
 	/// Closing a <tt>ByteArrayOutputStream</tt> has no effect. The methods in
 	/// this class can be called after the stream has been closed without
 	/// generating an <tt>IOException</tt>.
-	/// 
 	/// </summary>
 	public class ReverseByteArrayOutputStream: System.IO.Stream
 	{

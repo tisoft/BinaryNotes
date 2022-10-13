@@ -58,13 +58,7 @@ public class PERCoderUtils {
     
     public static boolean is7BitEncodedString(ElementInfo elementInfo) {
         int stringType = CoderUtils.getStringTagForElement(elementInfo);
-        boolean is7Bit = 
-            ( 
-                stringType == UniversalTag.PrintableString || 
-                stringType ==UniversalTag.VisibleString
-            )
-            ;
-        return is7Bit;
+        return stringType == UniversalTag.PrintableString || stringType == UniversalTag.VisibleString ||
+                stringType == UniversalTag.IA5String;
     }
-    
 }

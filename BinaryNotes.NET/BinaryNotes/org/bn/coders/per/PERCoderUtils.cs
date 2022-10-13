@@ -46,6 +46,7 @@ namespace org.bn.coders.per
             is7Bit = (
                 stringType == org.bn.coders.UniversalTags.PrintableString
                 || stringType == org.bn.coders.UniversalTags.VisibleString
+                || stringType == org.bn.coders.UniversalTags.IA5String
             );
             return is7Bit;
         }
