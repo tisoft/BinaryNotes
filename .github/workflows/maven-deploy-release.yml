@@ -29,8 +29,11 @@ jobs:
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+      - name: Extract release notes
+        id: extract-release-notes
+        uses: ffurrer2/extract-release-notes@v1
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          body_path: ChangeLog.txt
+          body: ${{ steps.extract-release-notes.outputs.release_notes }}
           files: Dist/target/binarynotes-dist-*.zip

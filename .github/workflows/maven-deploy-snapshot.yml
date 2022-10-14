@@ -32,10 +32,15 @@ jobs:
         run: git tag -f latest
       - name: push latest tag
         run: git push -f origin latest
+      - name: Extract release notes
+        id: extract-release-notes
+        uses: ffurrer2/extract-release-notes@v1
+        with:
+          prerelease: true
       - name: Prerelease
         uses: softprops/action-gh-release@v1
         with:
-          body_path: ChangeLog.txt
+          body: ${{ steps.extract-release-notes.outputs.release_notes }}
           files: Dist/target/binarynotes-dist-*.zip
           prerelease: true
           tag_name: latest
