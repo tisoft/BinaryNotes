@@ -188,7 +188,10 @@ public abstract class EncoderTest {
         checkEncoded(encoder, coderTestUtils.createTestIA5(), coderTestUtils.createTestIA5Bytes());
 
         printEncoded("TestOCT",encoder, coderTestUtils.createTestOCT());
-        checkEncoded(encoder, coderTestUtils.createTestOCT(), coderTestUtils.createTestOCTBytes());        
+        checkEncoded(encoder, coderTestUtils.createTestOCT(), coderTestUtils.createTestOCTBytes());
+
+        printEncoded("TestNMR",encoder, coderTestUtils.createTestNMR());
+        checkEncoded(encoder, coderTestUtils.createTestNMR(), coderTestUtils.createTestNMRBytes());
     }
     
     @Test

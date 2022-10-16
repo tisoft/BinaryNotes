@@ -550,7 +550,23 @@ public class PERAlignedDecoder extends Decoder {
         skipAlignedBits(stream);
         if (strLen > 0) {
             byte[] value = new byte[strLen];
-            stream.read(value);
+            if(PERCoderUtils.isNumericString(elementInfo)) {
+                BitArrayInputStream bitStream=(BitArrayInputStream) stream;
+                // 4-bit encoding of string containing only space and digits
+                for (int i = 0; i < strLen; i++) {
+                    byte decodedTagByte = (byte) bitStream.readBits(4);
+                    if (decodedTagByte > 0 && decodedTagByte <= 10) {
+                        // digit
+                        value[i] = (byte) ((byte) (decodedTagByte + 47));
+                    } else {
+                        // space
+                        value[i] = (byte) 32;
+                    }
+                }
+                skipAlignedBits(stream);
+            } else {
+                stream.read(value);
+            }
             result.setValue(CoderUtils.bufferToASN1String(value, elementInfo));
         } else {
             result.setValue("");

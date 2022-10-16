@@ -116,6 +116,11 @@ public class PERAlignedCoderTestUtils extends CoderTestUtilities {
     }
 
     @Override
+    public byte[] createTestNMRBytes() {
+        return new byte[]{0x07, 0x21, 0x11, 0x11, 0x10};
+    }
+
+    @Override
     public byte[] createTestOCTBytes() {
         return new byte[]{0x05, 0x01, 0x02, (byte) 0xFF, 0x03, 0x04};
     }

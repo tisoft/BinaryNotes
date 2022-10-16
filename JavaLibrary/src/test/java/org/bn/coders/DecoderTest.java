@@ -218,6 +218,11 @@ public abstract class DecoderTest {
         TestOCT valOct = decoder.decode(stream, TestOCT.class);
         assertNotNull(valOct);
         ByteTools.checkBuffers(valOct.getValue(), coderTestUtils.createTestOCT().getValue());
+
+        stream = new ByteArrayInputStream(coderTestUtils.createTestNMRBytes());
+        TestNMR valNmr = decoder.decode(stream, TestNMR.class);
+        assertNotNull(valNmr);
+        assertEquals(valNmr.getValue(), coderTestUtils.createTestNMR().getValue());
     }
 
     @Test

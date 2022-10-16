@@ -144,6 +144,9 @@ public class BERCoderTestUtils extends CoderTestUtilities {
     public byte[] createTestIA5Bytes() { return new byte[]{0x16, 0x05, 0x48, 0x65, 0x6C, 0x6C, 0x6F}; }
 
     @Override
+    public byte[] createTestNMRBytes() { return new byte[]{0x12, 0x07, 0x31, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30}; }
+
+    @Override
     public byte[] createTestOCTBytes() {
         return new byte[]{0x04, 0x05, 0x01, 0x02, (byte) 0xFF, 0x03, 0x04};
     }

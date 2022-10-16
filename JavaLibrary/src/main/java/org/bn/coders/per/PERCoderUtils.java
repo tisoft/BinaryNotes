@@ -61,4 +61,8 @@ public class PERCoderUtils {
         return stringType == UniversalTag.PrintableString || stringType == UniversalTag.VisibleString ||
                 stringType == UniversalTag.IA5String;
     }
+
+    public static boolean isNumericString(ElementInfo elementInfo) {
+        return CoderUtils.getStringTagForElement(elementInfo) == UniversalTag.NumericString;
+    }
 }

@@ -227,9 +227,17 @@ public abstract class CoderTestUtilities {
         return value;
     }
 
+    public TestNMR createTestNMR() {
+        TestNMR value = new TestNMR();
+        value.setValue("1000000");
+        return value;
+    }
+
     public abstract byte[] createTestPRNBytes();
 
     public abstract byte[] createTestIA5Bytes();
+
+    public abstract byte[] createTestNMRBytes();
 
     public TestOCT createTestOCT() {
         TestOCT value = new TestOCT();

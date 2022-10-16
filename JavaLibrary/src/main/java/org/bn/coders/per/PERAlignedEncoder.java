@@ -32,6 +32,7 @@ import org.bn.metadata.constraints.ASN1ValueRangeConstraintMetadata;
 import org.bn.metadata.constraints.IASN1ConstraintMetadata;
 import org.bn.types.BitString;
 import org.bn.types.ObjectIdentifier;
+import org.bn.utils.BitArrayInputStream;
 import org.bn.utils.BitArrayOutputStream;
 
 public class PERAlignedEncoder extends Encoder {
@@ -536,7 +537,30 @@ public class PERAlignedEncoder extends Encoder {
         doAlign(stream);
         resultSize += value.length;
         if (value.length > 0) {
-            stream.write(value);
+            if(PERCoderUtils.isNumericString(elementInfo)) {
+                BitArrayOutputStream bitStream=(BitArrayOutputStream) stream;
+                // 4-bit encoding of string containing only space and digits
+                resultSize = 0;
+                for (int i = 0; i < value.length; i++) {
+                    byte b = value[i];
+                    if (b == 32) {
+                        // space
+                        b = 0;
+                    } else if (b >= 48 && b <= 57) {
+                        // digit
+                        b = (byte)(b - 47);
+                    } else {
+                        // other character, ignore
+                        continue;
+                    }
+
+                    bitStream.writeBits(b, 4);
+                    resultSize++;
+                }
+                doAlign(stream);
+            } else {
+                stream.write(value);
+            }
         }
         return resultSize;
     }
