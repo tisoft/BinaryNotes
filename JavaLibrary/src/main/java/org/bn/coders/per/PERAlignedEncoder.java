@@ -339,6 +339,8 @@ public class PERAlignedEncoder extends Encoder {
                             bitStream
                     );
                 } else if (constraint instanceof ASN1SizeConstraintMetadata) {
+                    // fixed size, not written to stream
+                    resultSize += (int)((ASN1SizeConstraintMetadata)constraint).getMax();
                 }
             } else {
                 resultSize += encodeLengthDeterminant(value, bitStream);
@@ -347,8 +349,9 @@ public class PERAlignedEncoder extends Encoder {
             ASN1ValueRangeConstraint constraint = elementInfo.getAnnotatedClass().getAnnotation(ASN1ValueRangeConstraint.class);
             resultSize += encodeConstraintLengthDeterminant(value, (int) constraint.min(), (int) constraint.max(), bitStream);
         } else if (elementInfo.getAnnotatedClass().isAnnotationPresent(ASN1SizeConstraint.class)) {
+            // fixed size, not written to stream
             ASN1SizeConstraint constraint = elementInfo.getAnnotatedClass().getAnnotation(ASN1SizeConstraint.class);
-            //resultSize += encodeConstraintLengthDeterminant(value, 0, (int)constraint.max(), bitStream);
+            resultSize += (int)constraint.max();
         } else {
             resultSize += encodeLengthDeterminant(value, bitStream);
         }
